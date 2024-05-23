@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kalkulator Segitiga</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+            <h1>Kalkulator Segitiga</h1>
+        </header>
+        <article>
+            <section>
+                <div class="switch-container">
+                    <label class="switch">
+                        <input type="checkbox" id="toggleSwitch">
+                        <span class="slider round"></span>
+                    </label>
+                    <span id="toggleLabel">Switch Keliling Segitiga</span>
+                </div>
+            </section>
+            <img src="https://thumb.viva.co.id/media/frontend/thumbs3/2022/04/11/6253da08988ca-segitiga_663_372.jpg"
+                alt="Segitiga" class="triangle-image">
+            <div id="rumusSegitiga">
+                <p id="rumusLuas">Rumus Luas Segitiga = 1/2 × Alas × Tinggi</p>
+                <p id="rumusKeliling" style="display: none;">Rumus Keliling Segitiga = Sisi1 + Sisi2 + Sisi3</p>
+            </div>
+        </article>
+        <section>
+            <div id="luasForm">
+                <h2>Hitung Luas Segitiga</h2>
+                <form>
+                    <label for="alas">Alas (cm):</label>
+                    <input type="number" id="alas" required>
+                    <label for="tinggi">Tinggi (cm):</label>
+                    <input type="number" id="tinggi" required>
+                    <p id="hasilLuas"></p>
+                    <button type="button" onclick="hitungLuas()">Hitung</button>
+                </form>
+            </div>
+            <div id="kelilingForm" style="display:none;">
+                <h2>Hitung Keliling Segitiga</h2>
+                <form>
+                    <label for="sisi1">Sisi 1 (cm):</label>
+                    <input type="number" id="sisi1" required>
+                    <label for="sisi2">Sisi 2 (cm):</label>
+                    <input type="number" id="sisi2" required>
+                    <label for="sisi3">Sisi 3 (cm):</label>
+                    <input type="number" id="sisi3" required>
+                    <p id="hasilKeliling"></p>
+                    <button type="button" onclick="hitungKeliling()">Hitung</button>
+                </form>
+            </div>
+        <section>
+    </div>
+        <script src="js/script.js"></script>
 </body>
 </html>
